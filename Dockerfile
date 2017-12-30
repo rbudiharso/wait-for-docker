@@ -3,5 +3,5 @@ RUN apk add --update git
 WORKDIR /opt
 RUN git clone https://github.com/rbudiharso/wait-for.git
 
-FROM alpine:latest
-COPY --from=0 /opt/wait-for/wait-for /
+FROM scratch
+COPY --from=0 /opt/wait-for/wait-for /opt/
